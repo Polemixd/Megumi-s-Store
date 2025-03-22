@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Interactiva con Imágenes Editables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9b9b9b;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: gray;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: gray;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .description {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+        }
+        .hidden {
+            display: none;
+        }
+        .button {
+            background-color: #333;
+            color: gray;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #9b9b9b;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #333;
+            color: gray;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a Megumi's Store!</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sección 1: Imágenes con botón de interacción -->
+        <h2>Terminos y Condiciones de Compra!</h2>
+        <div class="image-container">
+        </div>
+        <p class="description">Terminos y Condiciones de la tienda!</p>
+        <button class="button" onclick="toggleSection('section1')">Mostrar/ocultar</button>
+        <div id="section1" class="hidden">
+            <div class="image-container">
+            </div>
+            <p>Términos y Condiciones (T0S)
+                Bienvenido a Megumi´s｜St0re. Estos términos y condiciones regulan el uso de nuestros servicios y la compra de nuestros productos.
+                
+                Aceptación de los Términos
+                
+                
+                Al utilizar nuestros servicios o realizar una compra, aceptas estos términos y condiciones. Si no estás de acuerdo, te pedimos que no utilices nuestros servicios ni realices ninguna compra.
+                
+                Servicios Ofrecidos
+                
+                
+                Ofrecemos productos digitales. Todos los productos se ofrecen "tal cual", contando con garantía permanente únicamente en caso de bloqueos.
+                
+                Precios y Pago
+                
+                
+                Los precios están en dólares o pesos argentinos a menos que se indique lo contrario. Los precios pueden cambiar sin previo aviso. El pago debe realizarse en su totalidad antes de que se procese cualquier pedido.
+                
+                Envíos y Entregas
+                
+                
+                La entrega del producto es inmediata, de cualquier forma se le ira avisando el proceso de entrega en el ticket que halla creado o por privado.
+                
+                Limitación de Responsabilidad
+                
+                
+                Megumi´s｜St0re no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente que surja del uso o la imposibilidad de usar nuestros productos o servicios.
+                
+                Modificaciones a los Términos
+                
+                
+                Nos reservamos el derecho de modificar estos términos en cualquier momento. Cualquier cambio será informado de manera adecuada, y tu uso continuo de nuestros servicios implica la aceptación de los términos actualizados.
+                Contacto
+                
+                Para cualquier consulta o inquietud respecto a estos términos y condiciones, por favor contáctanos</p>
+        </div>
+
+        <!-- Sección 2: Formulario interactivo -->
+        <h2>Nuestro Discord!</h2>
+        <div class="image-container">
+        </div>
+        <div class="form-container">
+        Si estas Interesado en Comprar unete a nuestro discord para mas info! https://discord.gg/xzPr6qVeDF</2>
+        </div>
+        <p id="form-message" class="hidden"></p>
+
+        <!-- Sección 3: Acordeón interactivo -->
+        <h2>Nuestros Productos!</h2>
+        <div class="image-container">
+        </div>
+        <button class="button" onclick="toggleSection('faq1')">Minecraft Premium!</button>
+        <div id="faq1" class="hidden">
+            <div class="image-container">
+                <p>Puesdes Comprar Minecraft Premium al Mejor Precio del mercado!</p>
+                <img src="https://media.discordapp.net/attachments/1303955492846174249/1316511886724042772/latest.png?ex=67df26bd&is=67ddd53d&hm=4aa6e0d6ce5bc3c92dced8226cfb5d2b5f9fdd0f84fc7acfa7579b2a0ccbd238&=&format=webp&quality=lossless&width=589&height=589" alt="Imagen de HTML">
+            </div>
+        </div>
+
+        <button class="button" onclick="toggleSection('faq2')">Discord Nitro!</button>
+        <div id="faq2" class="hidden">
+            <div class="image-container">
+                <p>Poseemos Discord Nitro al mejor precio del mercado!</p>
+                <img src="https://media.discordapp.net/attachments/1303955506284462090/1328069987017031752/images.png?ex=67df030f&is=67ddb18f&hm=20a3682b4e61576acf693d0d7db207e71bf04fd7d00d83ebb5dff9d6701b627c&=&format=webp&quality=lossless" alt="Imagen de CSS">
+            </div>
+        </div>
+
+    <script>
+        // Función para mostrar/ocultar secciones
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        }
+
+        // Función para enviar el formulario
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                document.getElementById('form-message').innerText = `Gracias, ${name}. Tu mensaje ha sido enviado.`;
+                document.getElementById('form-message').classList.remove('hidden');
+            } else {
+                document.getElementById('form-message').innerText = 'Por favor, completa todos los campos.';
+                document.getElementById('form-message').classList.remove('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
